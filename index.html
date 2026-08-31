@@ -1,240 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FitPro Brasil | Produtos e Equipamentos para Academia</title>
-  <meta name="description" content="Encontre equipamentos, acessórios e produtos para academia. Compare opções, confira características e escolha os itens ideais para seu treino.">
-  <meta name="robots" content="index,follow,max-image-preview:large">
-  <link rel="canonical" href="https://www.seudominio.com.br/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="FitPro Brasil | Produtos para Academia">
-  <meta property="og:description" content="Equipamentos e acessórios para treinos em casa ou na academia.">
-  <meta property="og:url" content="https://www.seudominio.com.br/">
-  <meta property="og:site_name" content="FitPro Brasil">
-  <meta name="theme-color" content="#111827">
-
-  <style>
-    :root{--bg:#f6f7f9;--surface:#fff;--text:#111827;--muted:#667085;--primary:#16a34a;--primary-dark:#15803d;--border:#e5e7eb;--shadow:0 10px 30px rgba(17,24,39,.08);--radius:18px}
-    *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
-    a{color:inherit;text-decoration:none}.container{width:min(1120px,92%);margin:auto}
-    .topbar{background:#111827;color:#fff;font-size:13px;text-align:center;padding:8px 12px}
-    header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:20}
-    .nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .logo{font-size:22px;font-weight:900;letter-spacing:-.6px}.logo span{color:var(--primary)}
-    nav{display:flex;gap:22px;font-size:14px;font-weight:700}nav a:hover{color:var(--primary)}
-    .hero{padding:68px 0;background:linear-gradient(135deg,#ecfdf3 0%,#fff 55%,#eff6ff 100%)}
-    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:45px;align-items:center}
-    .eyebrow{display:inline-block;background:#dcfce7;color:#166534;border-radius:999px;padding:7px 12px;font-size:13px;font-weight:800}
-    h1{font-size:clamp(38px,5vw,64px);line-height:1.04;letter-spacing:-2.5px;margin:18px 0}
-    .hero p{font-size:18px;color:var(--muted);max-width:650px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:12px;font-weight:800;border:1px solid transparent;cursor:pointer}
-    .btn-primary{background:var(--primary);color:#fff}.btn-primary:hover{background:var(--primary-dark)}
-    .btn-secondary{background:#fff;border-color:var(--border)}
-    .hero-card{background:#111827;color:#fff;border-radius:28px;padding:28px;box-shadow:var(--shadow)}
-    .hero-card .mock{height:280px;border-radius:20px;background:linear-gradient(145deg,#1f2937,#374151);display:flex;align-items:center;justify-content:center;font-size:70px}
-    section{padding:70px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px}
-    h2{font-size:34px;line-height:1.15;letter-spacing:-1px;margin:0}.lead{color:var(--muted);max-width:680px}
-    .categories,.products,.benefits,.reviews{display:grid;gap:18px}.categories{grid-template-columns:repeat(4,1fr)}
-    .category,.benefit,.review,.product{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 5px 18px rgba(17,24,39,.04)}
-    .category{padding:22px}.category-icon{font-size:32px}.category h3{margin:10px 0 5px}.category p{margin:0;color:var(--muted);font-size:14px}
-    .products{grid-template-columns:repeat(3,1fr)}.product{overflow:hidden}
-    .product-img{height:210px;background:#f3f4f6;display:flex;align-items:center;justify-content:center;font-size:62px}
-    .product-body{padding:20px}.tag{font-size:12px;font-weight:800;color:#166534;background:#dcfce7;border-radius:999px;padding:5px 9px}
-    .product h3{font-size:19px;margin:13px 0 7px}.product p{font-size:14px;color:var(--muted);min-height:44px}
-    .price{font-size:24px;font-weight:900;margin:14px 0}.small{font-size:12px;color:var(--muted);font-weight:500}
-    .benefits{grid-template-columns:repeat(3,1fr)}.benefit{padding:24px}.benefit strong{display:block;font-size:17px;margin:8px 0}
-    .reviews{grid-template-columns:repeat(3,1fr)}.review{padding:24px}.stars{letter-spacing:2px}.review p{color:#475467}
-    .faq{max-width:850px;margin:auto}.faq details{background:#fff;border:1px solid var(--border);border-radius:12px;margin:10px 0;padding:17px 20px}.faq summary{font-weight:800;cursor:pointer}
-    .notice{background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;padding:16px;border-radius:12px;font-size:14px;margin-top:22px}
-    .newsletter{background:#111827;color:#fff;border-radius:25px;padding:40px}.newsletter p{color:#cbd5e1}.form{display:flex;gap:10px;max-width:650px}.form input{flex:1;border:0;border-radius:11px;padding:14px 15px;font:inherit}
-    footer{background:#0b1220;color:#cbd5e1;padding:45px 0 25px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:30px}.footer-title{color:#fff;font-weight:800;margin-bottom:10px}
-    footer a{display:block;margin:7px 0;color:#cbd5e1;font-size:14px}footer a:hover{color:#fff}.copyright{border-top:1px solid #263244;margin-top:30px;padding-top:20px;font-size:13px}
-    @media(max-width:850px){nav{display:none}.hero-grid{grid-template-columns:1fr}.categories{grid-template-columns:repeat(2,1fr)}.products,.benefits,.reviews{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:560px){section{padding:50px 0}.categories,.products,.benefits,.reviews,.footer-grid{grid-template-columns:1fr}.hero{padding:48px 0}h1{letter-spacing:-1.5px}.form{flex-direction:column}.btn{width:100%}.actions{display:grid}}
-  </style>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "name":"FitPro Brasil",
-    "url":"https://www.seudominio.com.br/",
-    "potentialAction":{
-      "@type":"SearchAction",
-      "target":"https://www.seudominio.com.br/?q={search_term_string}",
-      "query-input":"required name=search_term_string"
-    }
-  }
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consulta de Informações e Condições</title>
+<meta name="description" content="Consulte informações, requisitos e condições de forma simples e transparente. Confira os detalhes antes de prosseguir.">
+<meta name="robots" content="index,follow">
+<style>
+:root{--p:#a91863;--pd:#85124e;--soft:#f9edf4;--text:#211a20;--muted:#6e6670;--border:#e8e2e6}
+*{margin:0;padding:0;box-sizing:border-box}
+body{min-height:100vh;min-height:100svh;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:linear-gradient(180deg,rgba(42,10,32,.66),rgba(125,20,78,.48)),url("fundo.jpg") center/cover fixed no-repeat;display:flex;align-items:center;justify-content:center;padding:20px}
+.container{width:100%;max-width:455px}
+.card{position:relative;overflow:hidden;background:#fff;border-radius:28px;padding:34px 25px 24px;box-shadow:0 28px 80px rgba(25,6,19,.34);animation:show .55s ease both}
+@keyframes show{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.top-line{position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#951052,#d62a7d)}
+.icon{width:64px;height:64px;margin:7px auto 17px;border-radius:20px;background:var(--soft);color:var(--p);display:flex;align-items:center;justify-content:center;font-size:29px;font-weight:900}
+.badge{display:table;margin:0 auto 17px;padding:7px 12px;border-radius:999px;background:#f9e8f1;color:#94104f;font-size:11px;font-weight:800;letter-spacing:.7px}
+h1{text-align:center;font-size:34px;line-height:1.1;letter-spacing:-1.1px;font-weight:850;margin-bottom:16px}
+h1 span{color:var(--p)}
+.intro{text-align:center;color:var(--muted);font-size:16px;line-height:1.55;max-width:355px;margin:0 auto 23px}
+.info-box{display:flex;gap:11px;align-items:flex-start;background:#faf8fa;border:1px solid var(--border);border-radius:14px;padding:13px 14px;margin-bottom:16px}
+.info-icon{flex:0 0 auto;width:23px;height:23px;border-radius:50%;background:#ead6e1;color:var(--p);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900}
+.info-box p{color:#5f5860;font-size:12px;line-height:1.5}
+.cta{display:flex;align-items:center;justify-content:center;width:100%;min-height:62px;border-radius:16px;background:linear-gradient(135deg,#d72b7d,#a9155e);color:#fff;text-decoration:none;font-size:19px;font-weight:800;box-shadow:0 12px 28px rgba(169,24,99,.26);transition:.2s ease}
+.cta:hover{background:linear-gradient(135deg,#c92370,#8f104f);transform:translateY(-2px)}
+.arrow{margin-left:9px;font-size:22px;transition:transform .2s ease}.cta:hover .arrow{transform:translateX(4px)}
+.status{display:flex;justify-content:center;align-items:center;gap:7px;margin-top:14px;color:#777078;font-size:11px}
+.status-dot{width:7px;height:7px;border-radius:50%;background:#238657}
+.divider{height:1px;background:var(--border);margin:22px 0 15px}
+.legal{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 17px}.legal a{color:#7d3158;font-size:11px;text-decoration:none}.legal a:hover{text-decoration:underline}
+.footer-note{margin-top:14px;text-align:center;color:#9a939a;font-size:10px;line-height:1.55}
+@media(max-width:390px){body{padding:12px}.card{padding:29px 18px 21px;border-radius:25px}h1{font-size:30px}.intro{font-size:15px}.cta{min-height:59px;font-size:18px}}
+@media(min-width:700px){.container{max-width:475px}.card{padding:44px 38px 28px}h1{font-size:40px}.intro{font-size:17px}}
+@media(prefers-reduced-motion:reduce){.card{animation:none}.cta{transition:none}}
+</style>
 </head>
-
 <body>
-  <div class="topbar">Informações claras, preços sujeitos à alteração e compra realizada no site do parceiro quando aplicável.</div>
-
-  <header>
-    <div class="container nav">
-      <a class="logo" href="#inicio" aria-label="FitPro Brasil">FitPro<span>Brasil</span></a>
-      <nav aria-label="Navegação principal">
-        <a href="#categorias">Categorias</a>
-        <a href="#produtos">Produtos</a>
-        <a href="#beneficios">Benefícios</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contato">Contato</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="inicio">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">EQUIPAMENTOS & ACESSÓRIOS FITNESS</span>
-          <h1>Monte seu espaço de treino com escolhas inteligentes.</h1>
-          <p>Encontre equipamentos e acessórios para academia, treino funcional e exercícios em casa. Compare características e escolha o que combina com seus objetivos.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="#produtos">Ver produtos</a>
-            <a class="btn btn-secondary" href="#categorias">Explorar categorias</a>
-          </div>
-          <div class="notice">Antes de comprar, confira no site de destino o preço, disponibilidade, prazo de entrega, condições de pagamento e políticas aplicáveis.</div>
-        </div>
-        <div class="hero-card" aria-label="Destaque de produtos fitness">
-          <div class="mock" aria-hidden="true">🏋️‍♂️</div>
-          <h3>Produtos para diferentes rotinas</h3>
-          <p>Pesos, acessórios, treino funcional e equipamentos para complementar seu ambiente de exercícios.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="categorias">
-      <div class="container">
-        <div class="section-head">
-          <div><h2>Encontre por categoria</h2><p class="lead">Navegue por tipos de produtos e encontre opções para diferentes estilos de treino.</p></div>
-        </div>
-        <div class="categories">
-          <a class="category" href="#produtos"><div class="category-icon">🏋️</div><h3>Pesos e halteres</h3><p>Opções para exercícios de força e resistência.</p></a>
-          <a class="category" href="#produtos"><div class="category-icon">🧘</div><h3>Yoga e mobilidade</h3><p>Acessórios para alongamento, mobilidade e conforto.</p></a>
-          <a class="category" href="#produtos"><div class="category-icon">🚴</div><h3>Cardio</h3><p>Equipamentos e acessórios para atividades aeróbicas.</p></a>
-          <a class="category" href="#produtos"><div class="category-icon">⚡</div><h3>Treino funcional</h3><p>Itens versáteis para diferentes exercícios.</p></a>
-        </div>
-      </div>
-    </section>
-
-    <section id="produtos">
-      <div class="container">
-        <div class="section-head">
-          <div><h2>Produtos em destaque</h2><p class="lead">Exemplos de produtos. Substitua os links pelos destinos reais da sua loja ou programa de afiliados.</p></div>
-        </div>
-        <div class="products">
-          <article class="product">
-            <div class="product-img" aria-hidden="true">🏋️</div>
-            <div class="product-body">
-              <span class="tag">DESTAQUE</span><h3>Kit de Halteres</h3>
-              <p>Conjunto versátil para exercícios de força e treinos variados.</p>
-              <div class="price">A partir de R$ 199,90</div><span class="small">Preço ilustrativo — confirme no site de destino.</span>
-              <a class="btn btn-primary" style="width:100%;margin-top:16px" href="https://www.seudominio.com.br/produto/halteres" rel="nofollow sponsored">Ver oferta</a>
-            </div>
-          </article>
-
-          <article class="product">
-            <div class="product-img" aria-hidden="true">🧘</div>
-            <div class="product-body">
-              <span class="tag">POPULAR</span><h3>Colchonete Fitness</h3>
-              <p>Superfície prática para exercícios no chão, alongamentos e mobilidade.</p>
-              <div class="price">A partir de R$ 79,90</div><span class="small">Preço ilustrativo — confirme no site de destino.</span>
-              <a class="btn btn-primary" style="width:100%;margin-top:16px" href="https://www.seudominio.com.br/produto/colchonete" rel="nofollow sponsored">Ver oferta</a>
-            </div>
-          </article>
-
-          <article class="product">
-            <div class="product-img" aria-hidden="true">⚡</div>
-            <div class="product-body">
-              <span class="tag">FUNCIONAL</span><h3>Kit de Faixas Elásticas</h3>
-              <p>Alternativa compacta para exercícios de resistência e mobilidade.</p>
-              <div class="price">A partir de R$ 59,90</div><span class="small">Preço ilustrativo — confirme no site de destino.</span>
-              <a class="btn btn-primary" style="width:100%;margin-top:16px" href="https://www.seudominio.com.br/produto/faixas" rel="nofollow sponsored">Ver oferta</a>
-            </div>
-          </article>
-        </div>
-        <div class="notice">Os valores exibidos acima são apenas exemplos de layout. Não publique preços, descontos, avaliações ou condições comerciais que não possam ser comprovados e mantidos atualizados.</div>
-      </div>
-    </section>
-
-    <section id="beneficios">
-      <div class="container">
-        <div class="section-head"><div><h2>Por que pesquisar antes de comprar?</h2><p class="lead">Informação objetiva ajuda o visitante a tomar uma decisão consciente.</p></div></div>
-        <div class="benefits">
-          <div class="benefit"><div>🔎</div><strong>Compare características</strong><span>Veja materiais, dimensões, capacidade e demais especificações informadas pelo fabricante.</span></div>
-          <div class="benefit"><div>📦</div><strong>Confira condições</strong><span>Verifique estoque, entrega, pagamento, troca e garantia diretamente com o vendedor.</span></div>
-          <div class="benefit"><div>🔒</div><strong>Compra transparente</strong><span>Quando houver redirecionamento, deixe claro que o visitante será levado ao site do parceiro.</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-head"><div><h2>O que os visitantes procuram</h2><p class="lead">Use esta área apenas com avaliações reais e verificáveis. Os exemplos abaixo são marcadores de conteúdo.</p></div></div>
-        <div class="reviews">
-          <div class="review"><div class="stars">★★★★★</div><p>“[Substitua por uma avaliação real e verificável.]”</p><strong>Cliente verificado</strong></div>
-          <div class="review"><div class="stars">★★★★★</div><p>“[Substitua por uma avaliação real e verificável.]”</p><strong>Cliente verificado</strong></div>
-          <div class="review"><div class="stars">★★★★★</div><p>“[Substitua por uma avaliação real e verificável.]”</p><strong>Cliente verificado</strong></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq">
-      <div class="container">
-        <div class="section-head"><div><h2>Perguntas frequentes</h2><p class="lead">Informações que ajudam o visitante antes de clicar em uma oferta.</p></div></div>
-        <div class="faq">
-          <details><summary>Os produtos são vendidos diretamente por este site?</summary><p>Isso depende do seu modelo de negócio. Se você usar links de parceiros ou afiliados, informe claramente que o visitante será direcionado a outro site para concluir a compra.</p></details>
-          <details><summary>Os preços são atualizados?</summary><p>Os preços podem mudar. Sempre confirme o valor, estoque, frete, prazo e condições no site do vendedor antes de finalizar a compra.</p></details>
-          <details><summary>Como escolher um equipamento?</summary><p>Considere objetivo de treino, espaço disponível, nível de experiência, especificações do produto, segurança de uso e orçamento.</p></details>
-          <details><summary>Como funciona a entrega?</summary><p>A entrega é definida pelo vendedor responsável pela oferta. Consulte prazo, regiões atendidas, frete e política de devolução na página de compra.</p></details>
-          <details><summary>Posso usar este site para anúncios?</summary><p>O site foi estruturado com foco em transparência e boa experiência de destino, mas nenhuma estrutura garante aprovação de anúncios. Revise também as políticas atuais da plataforma, a página de destino e o conteúdo efetivamente anunciado.</p></details>
-        </div>
-      </div>
-    </section>
-
-    <section id="contato">
-      <div class="container">
-        <div class="newsletter">
-          <h2>Receba novidades sobre produtos fitness</h2>
-          <p>Cadastre seu e-mail para receber informações e novidades. Não envie dados sensíveis por este formulário.</p>
-          <form class="form" onsubmit="event.preventDefault(); alert('Demonstração: conecte este formulário a um serviço de e-mail antes de publicar.');">
-            <label class="sr-only" for="email">Seu e-mail</label>
-            <input id="email" type="email" placeholder="seu@email.com" required autocomplete="email">
-            <button class="btn btn-primary" type="submit">Cadastrar</button>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="logo" style="color:#fff">FitPro<span>Brasil</span></div>
-          <p>Conteúdo e comparação de produtos para academia, treino funcional e exercícios em casa.</p>
-        </div>
-        <div>
-          <div class="footer-title">Institucional</div>
-          <a href="politica-de-privacidade.html">Política de Privacidade</a>
-          <a href="termos-de-uso.html">Termos de Uso</a>
-          <a href="sobre.html">Sobre nós</a>
-        </div>
-        <div>
-          <div class="footer-title">Atendimento</div>
-          <a href="mailto:contato@seudominio.com.br">contato@seudominio.com.br</a>
-          <a href="#faq">Perguntas frequentes</a>
-          <a href="#contato">Contato</a>
-        </div>
-      </div>
-      <div class="copyright">© 2026 FitPro Brasil. Todos os direitos reservados. Substitua informações demonstrativas pelos dados reais da empresa antes da publicação.</div>
-    </div>
-  </footer>
-
-  <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+<main class="container">
+<section class="card" aria-labelledby="titulo">
+<div class="top-line" aria-hidden="true"></div>
+<div class="icon" aria-hidden="true">✓</div>
+<div class="badge">CONSULTA ONLINE</div>
+<h1 id="titulo">Consulte informações e veja as <span>condições disponíveis</span></h1>
+<p class="intro">Acesse a página de consulta para conferir informações, requisitos e condições de forma simples e transparente.</p>
+<div class="info-box">
+<div class="info-icon" aria-hidden="true">i</div>
+<p>As condições podem variar de acordo com o perfil, região, disponibilidade e critérios informados na página de destino.</p>
+</div>
+<a class="cta" href="https://incredible-desenrola.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Acessar página de consulta">Acessar consulta <span class="arrow" aria-hidden="true">→</span></a>
+<div class="status"><span class="status-dot" aria-hidden="true"></span>Processo online e informativo</div>
+<div class="divider"></div>
+<nav class="legal" aria-label="Informações legais">
+<a href="/politica-de-privacidade.html">Política de Privacidade</a>
+<a href="/termos.html">Termos de Uso</a>
+<a href="/contato.html">Contato</a>
+</nav>
+<p class="footer-note">Esta página tem caráter informativo. Não há garantia de aprovação, concessão ou disponibilidade de qualquer benefício ou condição. Consulte os critérios e informações apresentados no site de destino.</p>
+</section>
+</main>
 </body>
 </html>
